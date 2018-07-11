@@ -1,0 +1,28 @@
+1)Remove all the stopped containers
+2) check the path where the docker images stored locally
+change the name of the container 
+docker run -d -p 8080:8080 --name myname imagename
+docker exec -it imageid /bin/bash
+
+docker file instruction
+docker images to write a docker file
+sample one 
+
+FROM is the instruction 
+
+LABEL SYNTAX
+LABEL IMAGENAME:VERSION
+-----------------------
+exmaple:
+FROM alpine:3.6
+LABEL AUTHOR=RAM LOCATION=BANGALORE  PURPOSE=DEMO
+LABEL AUTHOR=RAM \
+             LOCATION=BANGALORE \
+			 PURPOSE=DEMO
+
+ARG JAVA_VERSION=1.8
+CMD echo'welcome java'
+
+--------------------------
+docker build -t demo:01
+docker run -it
